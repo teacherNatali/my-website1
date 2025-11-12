@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Навігаційна панель</title>
+
+  <style>
+    /* Оформлення сторінки */
+body {
+  margin: 0;                     /* обнуляємо відступи */
+  font-family: Arial, sans-serif; /* встановлюємо шрифт */
+}
+
+/* Навігаційна панель */
+.nav {
+  display: flex;                  /* гнучке розташування елементів */
+  justify-content: space-between; /* рівномірні пропуски між блоками */
+  align-items: center;            /* центрування по вертикалі */
+  background-color: #333333;      /* колір фону */
+  color: white;                   /* колір тексту */
+  padding: 20px;                  /* внутрішні відступи */
+}
+
+/* Контейнер із посиланнями */
+.nav-links {
+  display: flex;                  /* розміщення посилань в один ряд */
+  gap: 10px;                      /* відстань між посиланнями */
+}
+
+/* Окремі елементи навігації */
+.nav-links-item {
+  text-decoration: none;          /* без підкреслення */
+  color: white;                   /* колір тексту */
+  padding: 10px 15px;             /* внутрішні відступи */
+  transition: 0.3s;               /* плавний перехід при наведенні */
+  border-radius: 5px;             /* для вирівнювання при наведенні */
+}
+
+/* Ефект при наведенні */
+.nav-links-item:hover {
+  background-color: #575757;      /* зміна фону */
+  border-radius: 5px;             /* заокруглення */
+}
+
+  </style>
+
+  
+</head>
+<body>
+  <link rel="stylesheet" href="style.css">
+
+
+
+  <div class="nav">
+    <div class="logo">Мій сайт</div>
+    <div class="nav-links">
+      <a href="#" class="nav-links-item">Головна</a>
+      <a href="#" class="nav-links-item">Про нас</a>
+      <a href="#" class="nav-links-item">Послуги</a>
+      <a href="#" class="nav-links-item">Контакти</a>
+    </div>
+  </div>
+
+  <script>
+    
+  </script>
+</body>
+</html>
