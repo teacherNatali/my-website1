@@ -1,178 +1,65 @@
-:root {
-  --accent: #2b9348;
-  --muted: #6b7280;
-  --card: #ffffff;
-  --bg: #f0f7f2;
+* {
+padding:0;
+margin:0
 }
 
-* {
-  box-sizing: border-box;
+body,html {
+height:100%
 }
 
 body {
-  margin: 0;
-  font-family: "Arial", sans-serif;
-  background: var(--bg);
-  color: #1f2937;
-  line-height: 1.5;
+background-color:#20B2AA;
+margin:0 auto;
+text-align:center;
+width:100%;
+font-family:'Roboto Condensed',sans-serif;
+color:#fff;
+font-weight:300;
+line-height:28px;
+font-size:19px;
+font-weight:700
 }
 
-/* Шапка */
-header {
-  background: linear-gradient(90deg, #3aa76d, #2b9348);
-  color: white;
-  padding: 28px 16px;
-  text-align: center;
+#wrapper {
+padding:0 15px;
+height:100%;
+display:flex
 }
 
-header h1 {
-  margin: 0 0 6px;
-  font-size: 28px;
+.content {
+align-self:center;
+margin:0 auto
 }
 
-main {
-  max-width: 1000px;
-  margin: 20px auto;
-  padding: 16px;
+.content__btn {
+font-size:20px;
+border:3px solid #000;
+color:#000;
+text-decoration:none;
+border-radius:100em;
+padding:20px 40px;
+letter-spacing:.05em;
+position:relative;
+transition:.3s
 }
 
-/* Вступ */
-.intro {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 18px;
-  align-items: center;
-  background: var(--card);
-  padding: 16px;
-  border-radius: 10px;
-  box-shadow: 0 6px 18px rgba(34, 60, 80, 0.08);
+.content__btn::before {
+content:'';
+border:3px solid #FFC0CB;
+width:100%;
+height:100%;
+position:absolute;
+left:3px;
+top:2px;
+border-radius:100em;
+background:#FFC0CB;
+z-index:-1;
+transition:.3s
 }
 
-.intro img {
-  width: 160px;
-  height: 110px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.intro .text {
-  flex: 1;
-  min-width: 200px;
-}
-
-/* Картки сортування */
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-  margin-top: 18px;
-}
-
-.card {
-  background: var(--card);
-  flex: 1 1 220px;
-  padding: 12px;
-  border-radius: 10px;
-  box-shadow: 0 6px 16px rgba(34, 60, 80, 0.06);
-  text-align: center;
-}
-
-.card img {
-  width: 90px;
-  height: 90px;
-  object-fit: contain;
-}
-
-.card h3 {
-  margin: 6px 0;
-  color: #123;
-}
-
-/* Як почати */
-.howto {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-  margin-top: 20px;
-}
-
-.steps {
-  flex: 1 1 360px;
-  background: var(--card);
-  padding: 16px;
-  border-radius: 10px;
-  box-shadow: 0 6px 16px rgba(34, 60, 80, 0.06);
-}
-
-.links {
-  flex: 1 1 260px;
-  background: linear-gradient(180deg, #f7fff7, #eefbee);
-  padding: 16px;
-  border-radius: 10px;
-}
-
-.links a {
-  color: var(--accent);
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.links a:hover {
-  text-decoration: underline;
-}
-
-/* Приєднуйся */
-.join {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  align-items: center;
-  margin-top: 18px;
-}
-
-.join img {
-  width: 100%;
-  max-width: 520px;
-  border-radius: 10px;
-  box-shadow: 0 8px 16px rgba(34, 60, 80, 0.06);
-}
-
-/* Футер */
-footer {
-  text-align: center;
-  color: var(--muted);
-  padding: 18px 6px;
-  font-size: 14px;
-}
-
-/* Кнопка "вгору" */
-.top-btn {
-  position: fixed;
-  right: 18px;
-  bottom: 18px;
-  background: var(--accent);
-  color: white;
-  border: none;
-  padding: 10px 12px;
-  border-radius: 8px;
-  box-shadow: 0 6px 14px rgba(43, 147, 72, 0.3);
-  cursor: pointer;
-  display: none;
-}
-
-/* Мобільне */
-@media (max-width: 720px) {
-  header h1 {
-    font-size: 20px;
-  }
-
-  .intro img {
-    width: 120px;
-    height: 84px;
-  }
-
-  .card img {
-    width: 70px;
-    height: 70px;
-  }
+.content__btn:hover::before {
+left:0;
+top:0;
+width:calc(100% - 6px);
+height:calc(100% - 6px)
 }
